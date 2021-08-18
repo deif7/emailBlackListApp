@@ -14,10 +14,8 @@ class EmailController extends Controller
 
     }
 
-
     public function store(Request $request)
     {
-
         logger('testRequest', [$request->all()]);
 
         $requestData = [
@@ -27,7 +25,6 @@ class EmailController extends Controller
             'timestamp' => $request['bounce']['timestamp']
         ];
 
-
         Email::create($requestData);
 
         return response('Success', '201');
@@ -36,7 +33,6 @@ class EmailController extends Controller
 
     public function show(Email $email)
     {
-
         $data = Email::all()->firstWhere('email', request('email'));
 
         return [
