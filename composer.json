@@ -1,5 +1,5 @@
 {
-    "name": "email/blacklist",
+    "name": "morondo/blacklist",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
