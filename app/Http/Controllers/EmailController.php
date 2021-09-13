@@ -33,8 +33,8 @@ class EmailController extends Controller
 
     public function show(Email $email)
     {
-        $data = Email::all()->firstWhere('email', request('email'));
-
+        $data = $email->where('email', request('email'))
+        ->first();
         return [
             'email' => request('email'),
             'is_blacklisted' => isset($data['email'])
